@@ -1,5 +1,8 @@
 #!/bin/bash
 
+apt install docker.io
+apt install docker-compose
+
 echo "[🔒] 1. Aplicando permissão de leitura (r--) para todo o conteúdo de /inoichi..."
 chmod -R a+r /inoichi
 
