@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -z "$OPENSEARCH_PASS" ]; then
+  echo "[❌] A variável de ambiente OPENSEARCH_PASS não está definida."
+  echo "Por favor, defina-a com: export OPENSEARCH_PASS='sua_senha'"
+  exit 1
+fi
+
 rm -rf /inoichi/temp/*
 
 echo "[*] Subindo containers com Docker Compose..."
