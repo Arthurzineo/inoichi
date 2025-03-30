@@ -5,6 +5,7 @@
 # ======================
 echo "[🆙] Atualizando sistema e pacotes..."
 sudo apt update && sudo apt upgrade -y
+apt install parallel
 
 # ======================
 # 🐳 Instalação do Docker e Docker Compose
