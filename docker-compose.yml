@@ -37,7 +37,7 @@ services:
       - 'SERVER_SSL_CERTIFICATE=/usr/share/opensearch-dashboards/config/certs/opensearch.crt'
       - 'SERVER_SSL_KEY=/usr/share/opensearch-dashboards/config/certs/opensearch.key'
       - "DISABLE_SECURITY_DASHBOARDS_PLUGIN=false"
-      - "OPENSEARCH_SSL_VERIFICATION_MODE=none"
+      - "OPENSEARCH_SSL_VERIFICATIONMODE=none"
     volumes:
       - ./certs:/usr/share/opensearch-dashboards/config/certs
     networks:
@@ -46,7 +46,7 @@ services:
       - opensearch
 
 networks:
-  opensearch-net: 
+  opensearch-net:    # Change this to external
 
 volumes:
-  opensearch_data: 
+  opensearch_data:
