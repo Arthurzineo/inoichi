@@ -1,0 +1,16 @@
+FROM kalilinux/kali-rolling:latest
+
+WORKDIR /scripts
+
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get dist-upgrade -y
+  
+RUN apt-get install -y \
+    locate wget git vim golang \
+    python3 python3-pip \
+    nmap nbtscan \
+    parallel
+
+ENV GOPATH=/root/go
+ENV PATH=$PATH:$GOPATH/bin
