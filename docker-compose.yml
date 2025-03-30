@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   opensearch:
-    image: opensearchproject/opensearch:latest
+    image: opensearchproject/opensearch:2.19.1
     environment:
       - discovery.type=single-node
       - bootstrap.memory_lock=true
@@ -28,7 +28,7 @@ services:
       - opensearch-net
 
   opensearch-dashboards:
-    image: opensearchproject/opensearch-dashboards:latest
+    image: opensearchproject/opensearch-dashboards:2.19.1
     ports:
       - "5601:5601"
     environment:
@@ -37,7 +37,7 @@ services:
       - 'SERVER_SSL_CERTIFICATE=/usr/share/opensearch-dashboards/config/certs/opensearch.crt'
       - 'SERVER_SSL_KEY=/usr/share/opensearch-dashboards/config/certs/opensearch.key'
       - "DISABLE_SECURITY_DASHBOARDS_PLUGIN=false"
-      - "OPENSEARCH_SSL_VERIFICATION_MODE=false"
+      - "OPENSEARCH_SSL_VERIFICATION_MODE=none"
     volumes:
       - ./certs:/usr/share/opensearch-dashboards/config/certs
     networks:
