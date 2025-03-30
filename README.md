@@ -90,7 +90,14 @@ chmod +x config.sh
 
 ---
 
-4. **Execute o script de inicialização:**
+4. **Prencha as listas de IPS:**
+   Coloque os IPS nessa lista no formato 1 ip por linha.
+```bash
+/inoichi/entrada/ips_firewall.txt
+/inoichi/entrada/ips_endpoint.txt
+```
+
+5. **Execute o script de inicialização:**
 
 ```bash
 cd /inoichi/scripts/
