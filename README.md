@@ -3,9 +3,7 @@
 Projeto de automação para reconhecimento de ativos em rede, com coleta, visualização e gestão centralizada de resultados usando o OpenSearch + OpenSearch Dashboards. Ideal para profissionais de cibersegurança e sysadmins que desejam automatizar seus processos de footprinting e discovery.
 
 ---
-Claro! Aqui está um exemplo de tópico que pode ir no seu `README.md` ou apresentação do projeto:
 
----
 
 ## 🎯 Propósito / O que esperamos resolver
 
